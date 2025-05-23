@@ -9,40 +9,40 @@ const UserManagement = () => {
   const users = [
     {
       id: 1,
-      name: "Michael Holz",
-      dateCreated: "04/10/2013",
+      name: "Mohan Gupta",
+      dateCreated: "01/01/2010",
       role: "Admin",
       status: "Active",
       image: Profile,
     },
     {
       id: 2,
-      name: "Paula Wilson",
-      dateCreated: "05/08/2014",
+      name: "Ajay Mishra",
+      dateCreated: "05/11/2014",
       role: "Publisher",
       status: "Active",
       image: Profile,
     },
     {
       id: 3,
-      name: "Antonio Moreno",
-      dateCreated: "11/05/2015",
+      name: "Rahul Sharma",
+      dateCreated: "01/01/2015",
       role: "Publisher",
       status: "Suspended",
       image: Profile,
     },
     {
       id: 4,
-      name: "Mary Saveley",
-      dateCreated: "06/09/2016",
+      name: "Suresh Kumar",
+      dateCreated: "02/10/2016",
       role: "Reviewer",
       status: "Active",
       image: Profile,
     },
     {
       id: 5,
-      name: "Martin Sommer",
-      dateCreated: "12/08/2017",
+      name: "Ravi Singh",
+      dateCreated: "07/12/2018",
       role: "Moderator",
       status: "Inactive",
       image: Profile,
@@ -74,7 +74,7 @@ const UserManagement = () => {
       <table className="user-table">
         <thead>
           <tr>
-            <th>#</th>
+            <th>Sr.No</th>
             <th>Name</th>
             <th>Date Created</th>
             <th>Role</th>
