@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.main {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a2a44 0%, #2b6777 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+    padding: 0px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    height: 100px;
+    width: 450px;
+    margin-left: -10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.form-container {
+    position: relative;
+    background-color: #263e64;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 450px;
+    text-align: center;
+    padding: 0px;
+}
+
+.bottom-section {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    position: absolute;
+    background-color: #40c4b4;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 250px;
+    box-sizing: border-box;
+    top: -30px;
+    left: 22%;
+}
+
+.avatar {
+    position: absolute;
+    margin: 20px 0;
+    font-size: 60px;
+    top: 7%;
+    left: 42%;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 35px 1fr; 
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.input-group .icon{
+    font-size: 25px;
+    color: #40c4b4;
+}
+
+.bottom-section input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2b6777;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.signup-form input::placeholder {
+    color: #a0a0a0;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #40c4b4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.signup-form button:hover {
+    background-color: #36a99a;
+}
+
+.bottom-text {
+    color: white;
+    font-size: 14px;
+}
+
+.bottom-text span{
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
