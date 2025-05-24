@@ -1,116 +1,138 @@
-/* Main container styling */
+
 .user-management-container {
   width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', Arial, sans-serif;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  width: 100%;
-  box-sizing: border-box; /* Ensure padding doesn't add to width */
-  flex: 1; /* Allow the container to grow and fill available space */
+  min-height: 100vh;
 }
 
-/* Banner styling */
 .banner1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f9fa;
-  padding: 15px 20px;
-  border-bottom: 1px solid #dee2e6;
-  margin-bottom: 20px;
-  width: 100%;
-  box-sizing: border-box;
+  background: linear-gradient(135deg, #1a2a44 0%, #2b6777 100%);
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner1 h1 {
   margin: 0;
-  font-size: 24px;
-  color: #333;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .logout-button {
-  background-color: #dc3545;
+  background-color: #ef4444;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
 }
 
 .logout-button:hover {
-  background-color: #c82333;
+  background-color: #dc2626;
 }
 
-/* Table styling */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .user-table {
-  width: 100%; /* Ensure table takes full width */
-  border-collapse: collapse;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
   background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .user-table th,
 .user-table td {
-  padding: 12px 15px;
+  padding: 16px;
   text-align: left;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .user-table th {
-  background-color: #f1f3f5;
+  background-color: #f3f4f6;
   font-weight: 600;
-  color: #495057;
+  color: #374151;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .user-table td {
-  color: #212529;
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.user-row {
+  transition: background-color 0.2s ease;
+}
+
+.user-row:hover {
+  background-color: #f9fafb;
 }
 
 .user-image {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 12px;
   vertical-align: middle;
+  object-fit: cover;
 }
 
 .status-dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .status-active {
-  background-color: #28a745;
+  background-color: #22c55e;
 }
 
 .status-suspended {
-  background-color: #dc3545;
+  background-color: #ef4444;
 }
 
 .status-inactive {
-  background-color: #ffc107;
+  background-color: #f59e0b;
 }
 
 .action-icon {
+  background: none;
+  border: none;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 12px;
+  transition: color 0.2s ease;
 }
 
 .action-icon.edit {
-  color: #007bff;
-  font-size: 16px;
+  color: #3b82f6;
+  font-size: 18px;
 }
 
 .action-icon.delete {
-  color: #dc3545;
-  font-size: 20px;
+  color: #ef4444;
+  font-size: 18px;
 }
 
 .action-icon:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
+

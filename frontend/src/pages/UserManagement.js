@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FiEdit, FiTrash2 } from "react-icons/fi";
 import Profile from "../assets/dp.jpg";
 import "../styles/UserManagement.css";
 
@@ -49,7 +50,6 @@ const UserManagement = () => {
     },
   ];
 
-  // Check if user is authenticated
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.token) {
@@ -65,57 +65,68 @@ const UserManagement = () => {
   return (
     <div className="user-management-container">
       <div className="banner1">
-        <h1>User Management Page</h1>
-        <button className="logout-button" onClick={handleLogout}>
+        <h1>User Management</h1>
+        <button
+          className="logout-button"
+          onClick={handleLogout}
+          aria-label="Logout"
+        >
           Logout
         </button>
       </div>
 
-      <table className="user-table">
-        <thead>
-          <tr>
-            <th>Sr.No</th>
-            <th>Name</th>
-            <th>Date Created</th>
-            <th>Role</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user) => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>
-                <img src={user.image} alt={user.name} className="user-image" />
-                {user.name}
-              </td>
-              <td>{user.dateCreated}</td>
-              <td>{user.role}</td>
-              <td>
-                <span
-                  className={`status-dot ${
-                    user.status == "Active"
-                      ? "status-active"
-                      : user.status == "Suspended"
-                      ? "status-suspended"
-                      : "status-inactive"
-                  }`}
-                ></span>
-                {user.status}
-              </td>
-              <td>
-                <span className="action-icon edit">
-                  <i class="fa-solid fa-pen"></i>
-                </span>
-                <span className="action-icon delete">
-                  <i class="fa-solid fa-xmark"></i>
-                </span>
-              </td>
+      <div className="table-wrapper">
+        <table className="user-table">
+          <thead>
+            <tr>
+              <th>Sr.No</th>
+              <th>Name</th>
+              <th>Date Created</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user.id} className="user-row">
+                <td>{user.id}</td>
+                <td>
+                  <img
+                    src={user.image}
+                    alt={user.name}
+                    className="user-image"
+                  />
+                  {user.name}
+                </td>
+                <td>{user.dateCreated}</td>
+                <td>{user.role}</td>
+                <td>
+                  <span
+                    className={`status-dot status-${user.status.toLowerCase()}`}
+                    title={`Status: ${user.status}`}
+                  ></span>
+                  {user.status}
+                </td>
+                <td>
+                  <button
+                    className="action-icon edit"
+                    aria-label={`Edit ${user.name}`}
+                  >
+                    <FiEdit />
+                  </button>
+                  <button
+                    className="action-icon delete"
+                    aria-label={`Delete ${user.name}`}
+                  >
+                    <FiTrash2 />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
