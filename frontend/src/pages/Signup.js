@@ -38,7 +38,7 @@ const Signup = () => {
 
   return (
     <div className="main">
-      <div className="form-container">
+      <div className="form-container"> 
         <div className="bottom-section">
           <div className="banner">
             <img src={banner} alt="Banner" />
